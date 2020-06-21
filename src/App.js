@@ -36,7 +36,7 @@ function App() {
     <div>
       <h1>Cat gallery</h1>
 
-      <img className="image" src={imageArray[greatIndex]} />
+      <img alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
       <div>
         <button onClick={handleAutoBackward}> auto backward</button>
         <button onClick={handleForward}>forward</button>
