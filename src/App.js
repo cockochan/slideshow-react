@@ -40,6 +40,7 @@ function App() {
       <div>
         <button onClick={handleAutoBackward}> auto backward</button>
         <button onClick={handleForward}>forward</button>
+        <button onClick={handleBackward}>stop</button>
         <button onClick={handleBackward}>backward</button>
         <button onClick={handleAutoForward}>Auto forward</button>
       </div>
