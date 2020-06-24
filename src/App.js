@@ -2,9 +2,12 @@ import React, { useState } from "react";
 function App() {
   const [greatIndex, setGreatIndex] = useState(0);
   const imageArray = [
-    "https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2020/4/13/ecab8c7af42a439d9043b0ade6e1f05b_18.jpg",
-    "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/cats_and_excessive_meowing_ref_guide/1800x1200_cats_and_excessive_meowing_ref_guide.jpg"
+    "https://constantindimitrenco.files.wordpress.com/2019/07/11930909_1608799322706701_5270319554366375071_o-3.jpg?w=1200&h=&crop=1",
+    "https://constantindimitrenco.files.wordpress.com/2019/07/11951470_1608799339373366_2371328067007969191_o.jpg?w=1200&h=&crop=1",
+    "https://constantindimitrenco.files.wordpress.com/2019/07/alp_0927.jpg?w=1200&h=&crop=1"
+
   ];
+
   const handleForward = () => {
     if (greatIndex < imageArray.length - 1) {
       setGreatIndex(greatIndex + 1);
@@ -24,14 +27,18 @@ function App() {
   const handleAutoForward = () => {
     setInterval(() => {
       handleForward();
-    }, 1000);
+    }, 700);
   };
 
   const handleAutoBackward = () => {
     setInterval(() => {
       handleBackward();
-    }, 1000);
+    },700);
   };
+
+  // const handleStop= () => {
+  //   setInterval(null)
+  // };
   return (
     <div>
       <h1>Cat gallery</h1>
@@ -39,9 +46,8 @@ function App() {
       <img alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
       <div>
         <button onClick={handleAutoBackward}> auto backward</button>
-        <button onClick={handleForward}>forward</button>
-        <button onClick={handleBackward}>stop</button>
         <button onClick={handleBackward}>backward</button>
+        <button onClick={handleForward}>forward</button>
         <button onClick={handleAutoForward}>Auto forward</button>
       </div>
     </div>
