@@ -1,39 +1,49 @@
 import React, { useState } from "react";
 function App() {
   const [greatIndex, setGreatIndex] = useState(0);
+  const [waiting, setWaiting]=useState()
   const imageArray = [
-    "https://constantindimitrenco.files.wordpress.com/2019/07/11930909_1608799322706701_5270319554366375071_o-3.jpg?w=1200&h=&crop=1",
-    "https://constantindimitrenco.files.wordpress.com/2019/07/11951470_1608799339373366_2371328067007969191_o.jpg?w=1200&h=&crop=1",
-    "https://constantindimitrenco.files.wordpress.com/2019/07/alp_0927.jpg?w=1200&h=&crop=1"
-
+    "./pics/394108_179405985495099_194997137_n.jpg",
+    "./pics/395565_179405452161819_1380352913_n.jpg",
+    "./pics/395565_179405452161819_1380352913_n.jpg"
   ];
 
   const handleForward = () => {
+    console.log(greatIndex)
     if (greatIndex < imageArray.length - 1) {
-      setGreatIndex(greatIndex + 1);
+      let newIndex = greatIndex+1;
+      console.log(newIndex)
+      setGreatIndex(newIndex);
     } else {
-      setGreatIndex(0);
+      // setGreatIndex(0);
+      console.log('zero')
     }
   };
 
   const handleBackward = () => {
     if (greatIndex > 0) {
+      console.log('back')
       setGreatIndex(greatIndex - 1);
     } else {
+      console.log('back2')
       setGreatIndex(imageArray.length - 1);
+      
     }
   };
 
   const handleAutoForward = () => {
-    setInterval(() => {
+    if(waiting) {return}
+    const newInterval =  setInterval(() => {
       handleForward();
-    }, 700);
+    }, 2000); 
+    setWaiting(newInterval)
   };
 
   const handleAutoBackward = () => {
-    setInterval(() => {
+    setTimeout(() => {
       handleBackward();
-    },700);
+      handleAutoBackward();
+    },2000);
   };
 
   // const handleStop= () => {
