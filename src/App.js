@@ -20,13 +20,16 @@ function App() {
     back ? 500 : null
   );
   const imageArray = [
-    "./pics/394108_179405985495099_194997137_n.jpg",
-    "./pics/395565_179405452161819_1380352913_n.jpg",
+    "./pics/jeka.jpg",
+    "./pics/pr.jpg",
     "./pics/419621_178440538924977_1347282475_n.jpg",
     "./pics/DSC_2093bc_.jpg",
-    "./pics/ALP_8313.png",
+    "./pics/chris.jpg",
     './pics/50934388_2326403780925794_8182476207179169792_o.jpg',
-    "./pics/jeka.jpg"
+    "./pics/katia.jpg",
+    "./pics/kidaero.jpg",
+    "./pics/pib.png",
+    "./pics/ALP_4008.png"
     
 
   ];
