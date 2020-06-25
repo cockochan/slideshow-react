@@ -24,12 +24,13 @@ function App() {
     "./pics/pr.jpg",
     "./pics/419621_178440538924977_1347282475_n.jpg",
     "./pics/DSC_2093bc_.jpg",
-    "./pics/chris.jpg",
+    "./pics/ALP_0392.png",
     './pics/50934388_2326403780925794_8182476207179169792_o.jpg',
     "./pics/katia.jpg",
     "./pics/kidaero.jpg",
-    "./pics/pib.png",
-    "./pics/ALP_4008.png"
+    "./pics/ALP_4008.png",
+    "./pics/ALP_4008.png",
+    './_CUB9815.jpg'
     
 
   ];
@@ -81,13 +82,15 @@ const handleStop =()=>{
       <div style={{height:'2px', width:'20%', alignSelf:'baseline', backgroundColor:'yellow', marginTop:'35px'}}></div>
      </div></div>
       <img style={{marginLeft:'35px',height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
-      <div>
+      <div style={{marginLeft:'35px'}}>
         <button onClick={handleAutoBackward}> auto backward</button>
         <button onClick={handleBackward}>backward</button>
         <button onClick={handleForward}>forward</button>
         <button onClick={handleAutoForward}>Auto forward</button>
         <button style={{backgroundColor:'red', color: 'white', fontWeight:'bolder', borderColor:'pink'}}onClick={handleStop}>stop(panik)</button>
-        </div></div>
+        </div>
+       
+        </div>
    
   );
 }
