@@ -33,7 +33,7 @@ function App() {
       setGreatIndex(newIndex);
     } else {
       setGreatIndex(0);
-      // console.log('zero')
+
     }
   };
 
@@ -63,10 +63,11 @@ const handleStop =()=>{
   return (
     <div>
     <div style={{display:'flex', flexDirection:'column'}} >
-      <div style={{display:'flex',flexDirection:'column',width:'100%', alignContent:'center' }}>
-      <div style={{width:'15px', height:'15px',backgroundColor:'orange', color:'white', fontWeight:'bolder'}}></div>
-      <div style={{width:'15px', height:'15px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'15px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
-      <div style={{width:'15px', height:'15px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'15px',backgroundColor:'black', color:'white', fontWeight:'bolder'}}></div><h1>Cat gallery</h1>
+      <div style={{marginTop:'35px',display:'flex',flexDirection:'row',width:'100%', alignText:'center', alignItems:'center' }}>
+      <div style={{width:'15px', height:'35px',backgroundColor:'orange', color:'white', fontWeight:'bolder'}}></div>
+      <div style={{width:'15px', height:'35px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'35px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
+      <div style={{width:'15px', height:'35px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'35px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
+      <p style={{fontWeight:'bolder', paddingTop:0, marginLeft:'15px', fontSize:'24px'}}>Cat gallery</p>
      </div></div>
       <img style={{height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
       <div>
