@@ -62,9 +62,11 @@ const handleStop =()=>{
 
   return (
     <div>
-    <div >
-      <div style={{display:'flex',flexDirection:'row',width:'100%', alignContent:'center' }}>
-     <div style={{width:'15px', height:'15px',backgroundColor:'black', color:'white', fontWeight:'bolder'}}></div><h1>Cat gallery</h1>
+    <div style={{display:'flex', flexDirection:'column'}} >
+      <div style={{display:'flex',flexDirection:'column',width:'100%', alignContent:'center' }}>
+      <div style={{width:'15px', height:'15px',backgroundColor:'orange', color:'white', fontWeight:'bolder'}}></div>
+      <div style={{width:'15px', height:'15px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'15px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
+      <div style={{width:'15px', height:'15px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'15px',backgroundColor:'black', color:'white', fontWeight:'bolder'}}></div><h1>Cat gallery</h1>
      </div></div>
       <img style={{height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
       <div>
