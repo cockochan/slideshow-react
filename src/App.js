@@ -22,7 +22,13 @@ function App() {
   const imageArray = [
     "./pics/394108_179405985495099_194997137_n.jpg",
     "./pics/395565_179405452161819_1380352913_n.jpg",
-    "./pics/419621_178440538924977_1347282475_n.jpg"
+    "./pics/419621_178440538924977_1347282475_n.jpg",
+    "./pics/DSC_2093bc_.jpg",
+    "./pics/ALP_8313.png",
+    './pics/50934388_2326403780925794_8182476207179169792_o.jpg',
+    "./pics/jeka.jpg"
+    
+
   ];
 
   const handleForward = () => {
@@ -63,19 +69,21 @@ const handleStop =()=>{
   return (
     <div>
     <div style={{display:'flex', flexDirection:'column'}} >
-      <div style={{marginTop:'35px',display:'flex',flexDirection:'row',width:'100%', alignText:'center', alignItems:'center' }}>
+      <div style={{height:'2px', width:'40%', alignSelf:'flex-end', backgroundColor:'red', marginTop:'35px'}}></div>
+      <div style={{display:'flex',flexDirection:'row',width:'100%', alignText:'center', alignItems:'center' }}>
       <div style={{width:'15px', height:'35px',backgroundColor:'orange', color:'white', fontWeight:'bolder'}}></div>
       <div style={{width:'15px', height:'35px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'35px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
       <div style={{width:'15px', height:'35px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'35px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
-      <p style={{fontWeight:'bolder', paddingTop:0, marginLeft:'15px', fontSize:'24px'}}>Cat gallery</p>
+      <p style={{fontWeight:'bolder', paddingTop:0, marginLeft:'15px', fontSize:'24px'}}>My photography gallery</p>
+      <div style={{height:'2px', width:'20%', alignSelf:'baseline', backgroundColor:'yellow', marginTop:'35px'}}></div>
      </div></div>
-      <img style={{height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
+      <img style={{marginLeft:'35px',height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
       <div>
         <button onClick={handleAutoBackward}> auto backward</button>
         <button onClick={handleBackward}>backward</button>
         <button onClick={handleForward}>forward</button>
         <button onClick={handleAutoForward}>Auto forward</button>
-        <button style={{backgroundColor:'red', color: 'white', fontWeight:'bolder'}}onClick={handleStop}>stop(panik)</button>
+        <button style={{backgroundColor:'red', color: 'white', fontWeight:'bolder', borderColor:'pink'}}onClick={handleStop}>stop(panik)</button>
         </div></div>
    
   );
