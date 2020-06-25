@@ -79,7 +79,7 @@ const handleStop =()=>{
       <div style={{width:'15px', height:'35px',backgroundColor:'orange', color:'white', fontWeight:'bolder'}}></div>
       <div style={{width:'15px', height:'35px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'35px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
       <div style={{width:'15px', height:'35px',backgroundColor:'red', color:'white', fontWeight:'bolder'}}></div><div style={{width:'15px', height:'35px',backgroundColor:'violet', color:'white', fontWeight:'bolder'}}></div>
-      <p style={{fontWeight:'bolder', color:'violet', paddingTop:0, marginLeft:'15px', fontSize:'24px'}}>My photography gallery</p>
+      <p style={{fontWeight:'bolder', color:'violet', paddingTop:0, marginLeft:'15px', fontSize:'24px'}}>Constantin Dimitrenco photography</p>
       
      </div><div style={{height:'2px', width:'20%', alignSelf:'flex-end', backgroundColor:'blue', marginTop:'35px'}}></div></div>
       <img style={{marginLeft:'35px',height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
