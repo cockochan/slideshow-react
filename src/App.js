@@ -1,16 +1,23 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState} from 'react';
 import useInterval from 'react-useinterval';
 
 function App() {
   const [greatIndex, setGreatIndex] = useState(0);
-  const [waiting, setWaiting]=useState()
-  const [action, setAction]=useState()
+
   const [start, setStart]=useState(null)
+  const [back, setBack]=useState(null)
+  
   useInterval(
     () => {
       handleForward()
     },
     start ? 500 : null
+  );
+  useInterval(
+    () => {
+      handleBackward()
+    },
+    back ? 500 : null
   );
   const imageArray = [
     "./pics/394108_179405985495099_194997137_n.jpg",
@@ -40,33 +47,34 @@ function App() {
       
     }
   };
-const handleAutoForward = () => {setStart(true)};
 
-  const handleAutoBackward = () => {
-    setTimeout(() => {
-      handleBackward();
-   
-    },2000);
-  };
+
+const handleAutoForward = () => {setStart(true)
+  setBack(false)};
+
+  const handleAutoBackward = () => {setStart(false) 
+    setBack(true)};
+
 const handleStop =()=>{
   setStart(null)
+  setBack(null)
 }
-  // const handleStop= () => {
-  //   setInterval(null)
-  // };
+
   return (
     <div>
-      <h1>Cat gallery</h1>
-
-      <img alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
+    <div >
+      <div style={{display:'flex',flexDirection:'row',width:'100%', alignContent:'center' }}>
+     <div style={{width:'15px', height:'15px',backgroundColor:'black', color:'white', fontWeight:'bolder'}}></div><h1>Cat gallery</h1>
+     </div></div>
+      <img style={{height:'500px', width:'auto'}} alt='whateverYouWantToSee' className="image" src={imageArray[greatIndex]} />
       <div>
         <button onClick={handleAutoBackward}> auto backward</button>
         <button onClick={handleBackward}>backward</button>
         <button onClick={handleForward}>forward</button>
         <button onClick={handleAutoForward}>Auto forward</button>
-        <button onClick={handleStop}>stop</button>
-      </div>
-    </div>
+        <button style={{backgroundColor:'red', color: 'white', fontWeight:'bolder'}}onClick={handleStop}>stop(panik)</button>
+        </div></div>
+   
   );
 }
 export default App;
